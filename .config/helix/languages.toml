@@ -1,0 +1,59 @@
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+
+[language-server.rust-analyzer.config]
+check = {command = "clippy", extraArgs = ["--", "-W", "clippy::all", "-W", "clippy::pedantic", "-W", "clippy::nursery"]}
+
+[[language]]
+name = "latex"
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+forwardSearchAfter = true
+
+[language-server.texlab.config.texlab.forwardSearch]
+executable = "zathura"
+args = [ "--synctex-forward", "%l:1:%f", "%p" ]
+
+[language-server.texlab.config.texlab.chktex]
+onEdit = true
+
+[[language]]
+name = "c"
+file-types  = ["c", "h"]
+roots = [".ccls"]
+language-servers = ["cc-ls"]
+
+[language-server.cc-ls]
+command = "ccls"
+
+[[language]]
+name = "typst"
+soft-wrap.enable = true
+auto-format = true
+language-servers = ["typst-lsp"]
+
+[language-server.typst-lsp]
+command = "typst-lsp"
+
+[language.formatter]
+command = "typstyle" 
+args = [ "-c", "40"]
+
+[[language]]
+name = "markdown"
+soft-wrap.enable = true
+auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md", "--config", "/home/void/.config/dprint/dprint.json"]}
+
+[[language]]
+name = "hare"
+scope = "source.hare"
+injection-regex = "hare"
+file-types = ["ha"]
+comment-token = "//"
+indent = { tab-width = 8, unit = "\t" }
+
+[[grammar]]
+name = "hare"

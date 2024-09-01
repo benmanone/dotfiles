@@ -1,0 +1,7 @@
+configuration {
+	font: "mono 20";
+	hide-scrollbar: true;
+	terminal: "/usr/bin/alacritty";
+}
+
+@import "~/.cache/wal/colors-rofi-dark"

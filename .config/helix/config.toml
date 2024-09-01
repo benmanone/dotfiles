@@ -1,0 +1,38 @@
+theme = "rose_pine_dawn"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+mouse = false
+smart-tab.enable = true
+
+[keys.normal]
+';' = "command_mode"
+
+A-h = "jump_view_left"
+A-l = "jump_view_right"
+
+A-j = "jump_forward"
+A-k = "jump_backward"
+
+A-w = ":buffer-close"
+A-q = ":q"
+A-s = ":vsplit"
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+
+esc = ["collapse_selection", "keep_primary_selection"]
+
+L = "goto_line_end"
+H = "goto_first_nonwhitespace"
+'{' = "goto_prev_paragraph"
+'}' = "goto_next_paragraph"
+
+[keys.select]
+L = "goto_line_end"
+H = "goto_first_nonwhitespace"
+'{' = "goto_prev_paragraph"
+'}' = "goto_next_paragraph"
+
+[keys.insert.j]
+k = "normal_mode"
