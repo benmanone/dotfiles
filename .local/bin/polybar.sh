@@ -1,2 +1,4 @@
-kill polybar
+#!/bin/sh
+
+pkill polybar
 polybar &
