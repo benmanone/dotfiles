@@ -1,3 +1,5 @@
+use-grammars = {only = ["hare"]}
+
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer"]
