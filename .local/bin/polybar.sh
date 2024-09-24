@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/fish
 
-pkill polybar
+kill polybar
 polybar &

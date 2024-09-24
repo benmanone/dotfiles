@@ -1,4 +1,4 @@
-theme = "rose_pine_dawn"
+theme = "rose_pine"
 
 [editor]
 line-number = "relative"
@@ -21,10 +21,10 @@ A-s = ":vsplit"
 "A-," = "goto_previous_buffer"
 "A-." = "goto_next_buffer"
 
-esc = ["collapse_selection", "keep_primary_selection"]
+esc = "remove_primary_selection"
 
-L = "goto_line_end"
-H = "goto_first_nonwhitespace"
+L = ["select_mode", "extend_to_line_end"]
+H = ["select_mode", "extend_to_first_nonwhitespace"]
 '{' = "goto_prev_paragraph"
 '}' = "goto_next_paragraph"
 
